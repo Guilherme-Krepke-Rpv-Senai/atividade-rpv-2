@@ -7,8 +7,7 @@ export function App() {
 
     return (
         <>
-            {/* <div className='bg-sky-700 w-full h-[50px] flex items-center '> */}
-                <BrowserRouter>
+            <BrowserRouter>
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/ConnectHub' element={<ConnectHub />} />
@@ -16,7 +15,6 @@ export function App() {
                         <Route path='/TaskMaster' element={<TaskMaster />} />
                     </Routes>
                 </BrowserRouter>
-            {/* </div> */}
         </>
     )
 }
