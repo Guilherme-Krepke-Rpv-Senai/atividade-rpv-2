@@ -1,24 +1,22 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import {Home} from "./pages/home/home";
-import {ConnectHub} from "./pages/connecthub/connecthub";
-import {MoneyFlow} from "./pages/moneyflow/moneyflow";
-import {TaskMaster} from "./pages/taskmaster/taskmaster";
-
-import { Header } from "./components/header";
-
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+import { Home } from './pages/home'
+import { TaskMaster } from './pages/taskmaster'
+import { ConnectHub } from './pages/connecthub'
+import { MoneyFlow } from './pages/moneyflow'
 export function App() {
-  return (
-    <>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/taskmaster" element={<TaskMaster />} />
-        <Route path="/connecthub" element={<ConnectHub />} />
-        <Route path="/moneyflow" element={<MoneyFlow />} />
-      </Routes>
-    </BrowserRouter>
-    </>
-  );
+
+    return (
+        <>
+            {/* <div className='bg-sky-700 w-full h-[50px] flex items-center '> */}
+                <BrowserRouter>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/ConnectHub' element={<ConnectHub />} />
+                        <Route path='/MoneyFlow' element={<MoneyFlow />} />
+                        <Route path='/TaskMaster' element={<TaskMaster />} />
+                    </Routes>
+                </BrowserRouter>
+            {/* </div> */}
+        </>
+    )
 }
